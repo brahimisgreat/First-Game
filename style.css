@@ -32,7 +32,7 @@ header, footer{
 }
 
 #gameCanvas{
-  border: 1px solid var(--lightColor);
+  border: 1px solid red;
   position: absolute;
   top: 50%;
   left: 50%;

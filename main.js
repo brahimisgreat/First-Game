@@ -1,5 +1,6 @@
 import './style.css'
-import Phaser, { Game, Physics } from 'phaser'
+import Phaser from 'phaser'
+import bg from './public/assets/bg.png'
 
 const sizes={
   width:500,
@@ -12,8 +13,12 @@ class GameScene extends Phaser.Scene{
     super('scene-game')
   }
 
-  preload(){}
-  create(){}
+  preload(){
+    this.load.image('bg','/assets/bg.png')
+  }
+  create(){
+    this.add.image(250,250,'bg')
+  }
   update(){}
 
     
@@ -28,11 +33,11 @@ const config = {
     default:'arcade',
     arcade:{
       gravity:{y:speedDown},
-      debug:true
+      debug:false
     }
-}
+},
+scene:[GameScene]
 }
 
-scene:[GameScene]
 
 const game = new Phaser.Game(config)
